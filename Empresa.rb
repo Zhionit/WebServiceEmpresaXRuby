@@ -1,10 +1,12 @@
 # Declare an Empresa Class
 # Made by @Zhionit
 
+#Requires
 require 'date'
 
 class Empresa
 
+      #Constructor
       def initialize(nit, nombre)
             @nit = nit
             @nombre = nombre
@@ -12,10 +14,12 @@ class Empresa
             addEmployers
       end
 
+      #Accesors
       attr_accessor :nit
       attr_accessor :nombre
       attr_accessor :employers
 
+      #Methods
       def addEmployers
 
             employers << Empleado.new(1, "Nombre 1", Date.new(1994,07,19), 93000000, 'Activo')
