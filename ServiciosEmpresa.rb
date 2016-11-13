@@ -5,24 +5,24 @@ class ServiciosEmpresa
 
       #Constructor
       def initialize
-            @serviciosEmpresa = ServiciosEmpresa.new
+            @empresa = Empresa.new
       end
 
       #Accesors
-      attr_reader :serviciosEmpresa
-      attr_writer :serviciosEmpresa
+      attr_reader :empresa
+      attr_writer :empresa
 
       #Methods
       def calcularNomina
-            serviciosEmpresa.calcularNomina
+            empresa.calcularNomina
       end
 
       def calcularEmpleadosSegunEstado estado
-            serviciosEmpresa.calcularEmpleadosSegunEstado(estado)
+            empresa.calcularEmpleadosSegunEstado(estado)
       end
 
       def calcularEmpleadosActivos
-            serviciosEmpresa.calcularEmpleadosActivos
+            empresa.calcularEmpleadosActivos
       end
 
 end
