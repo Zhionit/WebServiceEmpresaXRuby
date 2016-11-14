@@ -21,7 +21,11 @@ class Empleado
 
       #Methods
       def calcularSalario
-            puts('Hello from Empleado, from calcularSalario')
+=begin
+            totalSalario = @salarioBase + (@salarioBase * 0.20)
+            puts "salarioBase: #{@salarioBase}, totalSalario: #{totalSalario}"
+=end
+
             @salarioBase += @salarioBase * 0.20
       end
 
