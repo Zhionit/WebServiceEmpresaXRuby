@@ -17,8 +17,8 @@ class ServiciosEmpresa
       def calcularNomina
             #Empresa.calcularNomina
             #@empresa = Empresa.new(123,'EmpresaX')
-            @empresa.calcularNomina
             puts('Hello from ServiciosEmpresa, from calcularNomina')
+            @empresa.calcularNomina
       end
 
       def calcularEmpleadosSegunEstado estado

@@ -17,8 +17,8 @@ class SWEmpresa
 
       #Methods
       def calcularNomina
-            @serviciosEmpresa.calcularNomina
             puts('Hello from SWEMpresa, from calcularNomina')
+            @serviciosEmpresa.calcularNomina
       end
 
       def calcularEmpleadosSegunEstado estado
