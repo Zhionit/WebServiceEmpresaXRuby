@@ -22,11 +22,11 @@ class SWEmpresa
       end
 
       def calcularEmpleadosSegunEstado estado
-            serviciosEmpresa.calcularEmpleadosSegunEstado(estado)
+            @serviciosEmpresa.calcularEmpleadosSegunEstado(estado)
       end
 
       def calcularEmpleadosActivos
-            serviciosEmpresa.calcularEmpleadosActivos
+            @serviciosEmpresa.calcularEmpleadosActivos
       end
 
 end

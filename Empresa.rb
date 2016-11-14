@@ -48,8 +48,9 @@ class Empresa
       end
 
       def calcularEmpleadosActivos
-            for i in employers.size
-                  if employers.at(i).estado.eql?("Activo")
+            cantidadActivos = 0
+            for i in 0...@employers.size
+                  if @employers.at(i).estado.eql?("Activo")
                         cantidadActivos += 1
                   end
             end
