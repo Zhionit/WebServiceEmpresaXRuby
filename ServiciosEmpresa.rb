@@ -1,11 +1,12 @@
 # Declare an ServiciosEmpresa Class
 # Made by @Zhionit
+require_relative 'Empresa'
 
 class ServiciosEmpresa
 
       #Constructor
       def initialize
-            @empresa = Empresa.new
+            @empresa = Empresa.new(123,'EmpresaX')
       end
 
       #Accesors
@@ -14,7 +15,10 @@ class ServiciosEmpresa
 
       #Methods
       def calcularNomina
-            empresa.calcularNomina
+            #Empresa.calcularNomina
+            #@empresa = Empresa.new(123,'EmpresaX')
+            @empresa.calcularNomina
+            puts('Hello from ServiciosEmpresa, from calcularNomina')
       end
 
       def calcularEmpleadosSegunEstado estado
