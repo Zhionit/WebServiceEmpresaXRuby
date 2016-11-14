@@ -1,11 +1,14 @@
 # Declare an SWEmpresa Class
 # Made by @Zhionit
 
+require_relative 'ServiciosEmpresa'
+
 class SWEmpresa
 
       #Constructor
       def initialize
-            @serviciosEmpresa = ServiciosEmpresa.New
+            @serviciosEmpresa = ServiciosEmpresa.new
+            puts('Hello from SWEMpresa, constructor')
       end
 
       #Accesors
@@ -14,7 +17,8 @@ class SWEmpresa
 
       #Methods
       def calcularNomina
-            serviciosEmpresa.calcularNomina
+            @serviciosEmpresa.calcularNomina
+            puts('Hello from SWEMpresa, from calcularNomina')
       end
 
       def calcularEmpleadosSegunEstado estado
