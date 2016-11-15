@@ -58,12 +58,46 @@ class Empresa
       end
 
       def calcularEmpleadosSegunEstado estado
-            for i in employers.size
-                  if employers.at(i).estado.eqls?(estado)
+            cantidadEmpleadosSegunEstado = 0
+            for i in 0...@employers.size
+                  if @employers.at(i).estado.eql?(estado)
                         cantidadEmpleadosSegunEstado += 1
                   end
             end
             cantidadEmpleadosSegunEstado
       end
 
+      def listaEmpleados
+            @employers
+      end
+
+      def buscarEmpleadoPorId idP
+            empleadoBuscado = 0
+
+            for i in 0...@employers.size
+                  if @employers.at(i).id.eql?(idP)
+                        empleadoBuscado = @employers.at(i)
+                  end
+            end
+
+            empleadoBuscado
+      end
+
+      def cambiarSalarioEmpleado nuevoSalario, idP
+            for i in 0...@employers.size
+                  if @employers.at(i).id.eql?(idP)
+                        @employers.at(i).salarioBase = nuevoSalario
+                  end
+            end
+      end
+
+      def agregarNuevoEmpleado nuevoEmpleado
+            for i in 0...@employers.size
+                  if @employers.at(i).id.eql?(nuevoEmpleado.id)
+                        puts 'El empleado ya existe'
+                  else
+                        @employers << Empleado.new(nuevoEmpleado.id, nuevoEmpleado.nombre, nuevoEmpleado.fechaNacimiento, nuevoEmpleado.salarioBase, nuevoEmpleado.estado)
+                  end
+            end
+      end
 end

@@ -29,4 +29,20 @@ class ServiciosEmpresa
             @empresa.calcularEmpleadosActivos
       end
 
+      def listaEmpleados
+            @empresa.listaEmpleados
+      end
+
+      def buscarEmpleadoPorId idP
+            @empresa.buscarEmpleadoPorId idP
+      end
+
+      def cambiarSalarioEmpleado nuevoSalario, idP
+            @empresa.cambiarSalarioEmpleado nuevoSalario,idP
+      end
+
+      def agregarNuevoEmpleado nuevoEmpleado
+            @empresa.agregarNuevoEmpleado nuevoEmpleado
+      end
+
 end

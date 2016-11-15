@@ -29,4 +29,19 @@ class SWEmpresa
             @serviciosEmpresa.calcularEmpleadosActivos
       end
 
+      def listaEmpleados
+            @serviciosEmpresa.listaEmpleados
+      end
+
+      def buscarEmpleadoPorId idP
+            @serviciosEmpresa.buscarEmpleadoPorId idP
+      end
+
+      def cambiarSalarioEmpleado nuevoSalario, idP
+            @serviciosEmpresa.cambiarSalarioEmpleado nuevoSalario, idP
+      end
+
+      def agregarNuevoEmpleado nuevoEmpleado
+            @serviciosEmpresa.agregarNuevoEmpleado nuevoEmpleado
+      end
 end
