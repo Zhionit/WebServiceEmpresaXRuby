@@ -80,29 +80,16 @@ class Empresa
                         empleadoBuscado = @@employers.at(i)
                   end
             end
-
             empleadoBuscado
       end
 
       def cambiarSalarioEmpleado nuevoSalario, idP
-
-            @@employers.map! { |element|
-                  if element.id.to_s.eql?(idP.to_s)
-                        #Empleado.new(element.id, element.nombre, element.fechaNacimiento, nuevoSalario, element.estado)
-                        element.salarioBase = nuevoSalario
-                        #puts 'ZZZZ ' + element.salarioBase.to_s
-                  else
-                        element
-                  end
-            }
-=begin
-            for i in 0...@employers.size
-                  if @employers.at(i).id.to_s.eql?(idP.to_s)
-                        @employers.at(i).salarioBase = nuevoSalario
-                        puts '---- ' + @employers.at(i).salarioBase.to_s
+            for i in 0...@@employers.size
+                  if @@employers.at(i).id.to_s.eql?(idP.to_s)
+                        @@employers.at(i).salarioBase = nuevoSalario
+                        puts '---- ' + @@employers.at(i).salarioBase.to_s
                   end
             end
-=end
       end
 
       def agregarNuevoEmpleado nuevoEmpleado
